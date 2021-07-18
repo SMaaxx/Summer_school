@@ -1,15 +1,16 @@
 {
   "type": "module",
-  "name": "Summer_school",
+  "name": "summer_school",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.13.2",
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "start-backend": "node --experimental-json-modules index.js"
+    "start": "node --experimental-json-modules --require dotenv/config index.js"
   }
 }

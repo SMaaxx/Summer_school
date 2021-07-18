@@ -1,9 +1,9 @@
 import Express from 'express';
 import mongoose from 'mongoose';
-import router from "./Router.js";
+import router from "./router.js";
 
 const App = Express();
-const DB_URL = `mongodb+srv://Max:Strongpassword@cluster0.kfqke.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+const DB_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@products.ipe8d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 App.use(Express.json());
 App.use('/api',router);
@@ -16,5 +16,4 @@ async function startApp(){
             console.log(e)
         }
 }
-
 startApp();
